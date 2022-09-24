@@ -5,15 +5,16 @@
         <div *ngFor="let receta of recetas"
               class="col-md-4  mt-5">
 
-              <div class="card" style="width: 22rem;">
+              <div class="card" style="width: 18rem;">
                 <img [src]="receta.portada" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h3 class="card-title">{{receta.nombre}}</h3>
+                  <h5 class="card-title">{{receta.nombre}}</h5>
                   <p class="card-text">{{receta.descripcion}}</p>
-                  <a href="#"   class="btn btn-primary">Ver receta</a>
+                  <a href="#" class="btn btn-primary">Ver receta</a>
                   <a href="#"   class="btn btn-secondary" (click)="eliminarReceta(receta._id)" >Eliminar receta</a>
                 </div>
               </div>
+
            
         </div>
     </div>

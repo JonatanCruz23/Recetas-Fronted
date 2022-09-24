@@ -1,0 +1,54 @@
+<app-menu>
+
+  <div class="container">
+
+    <form #recetaForm="ngForm" (ngSubmit)="addReceta(recetaForm)">
+      <div class="row">
+        <div class="col-4 pt-4">
+
+          <div class="mb-2">
+            <label for="exampleInputEmail1" class="form-label">Nombre</label>
+            <input type="text"
+             class="form-control"
+              name="nombre" 
+              [(ngModel)]="recetaService.selectedReceta.nombre"
+              />
+          </div>
+
+          <div class="mb-2">
+            <label  class="form-label">Foto</label>
+            <input type="text" class="form-control" name="portada"
+            [(ngModel)]="recetaService.selectedReceta.portada"
+            >
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Descricion</label>
+            <textarea name="descripcion" cols="46" rows="5" style="resize: both;"
+            [(ngModel)]="recetaService.selectedReceta.descripcion"
+            >
+                </textarea>
+          </div>
+
+          <button class="btn btn-secondary">Agregar</button>
+        </div>
+
+      
+        <div class="col-3 pt-4">
+          <div class="mb-2">
+            <label for="exampleInputEmail1" class="form-label">Ingrediente</label>
+            <input type="text" class="form-control" name="ingrediente">
+          </div>
+        </div>
+        <div class="col-3 pt-4">
+          <div class="mb-2">
+            <label for="exampleInputEmail1" class="form-label">Cantidad</label>
+            <input type="text" class="form-control" name="cantidad">
+          </div>
+        </div>
+      </div>
+    </form>
+
+  </div>
+
+</app-menu>
